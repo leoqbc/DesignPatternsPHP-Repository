@@ -1,0 +1,8 @@
+POST http://localhost:8000/api/products
+Content-Type: application/json
+
+{
+    "name": "Product 1",
+    "description": "Product decription here on file",
+    "price": 234.22
+}

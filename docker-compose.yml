@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  app:
+    image: webdevops/php-nginx-dev:8.2-alpine
+    ports:
+      - 8000:80
+    environment:
+      - WEB_DOCUMENT_ROOT=/app/public
+      - PHP_DATE_TIMEZONE=America/Sao_Paulo
+      - PHP_DISPLAY_ERRORS=1
+    volumes:
+      - .:/app
+  mariadb:
+    image: mariadb:10.7.8-focal
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MARIADB_ROOT_PASSWORD: 123456
+      MARIADB_DATABASE: myapp
