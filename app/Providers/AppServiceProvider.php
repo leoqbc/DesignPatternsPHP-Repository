@@ -24,7 +24,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind(Repository::class, function () {
             return new Repository(
-                new EloquentRepositoryStrategy()
+                new RabbitMQRepositoryStrategy()
             );
         });
     }

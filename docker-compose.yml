@@ -18,3 +18,7 @@ services:
     environment:
       MARIADB_ROOT_PASSWORD: 123456
       MARIADB_DATABASE: myapp
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - 15672:15672
