@@ -11,6 +11,8 @@ Rodar na primeira vez:
 ```
 docker compose up -d
 
+docker compose exec app bash
+
 cd /app
 
 composer install
@@ -30,3 +32,4 @@ Desafio Repository do vídeo:
 6. Testar a implementação
 
 Video no youtube: 
+https://youtu.be/j0Yc4CQ5b88
